@@ -1,0 +1,11 @@
+packages:
+  - packages/*
+
+# pnpm 11 requires an explicit decision for dependency build scripts. esbuild needs
+# its postinstall to install the native binary; the other native packages ship
+# prebuilt binaries and are not needed by the plugin build or its checks.
+allowBuilds:
+  '@deepseek-ai/dsh-subprocess-local': false
+  esbuild: true
+  koffi: false
+  node-pty: false

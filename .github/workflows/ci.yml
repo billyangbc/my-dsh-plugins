@@ -1,0 +1,56 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  DSH_CHECKOUT: ${{ github.workspace }}/dsh-base
+
+jobs:
+  plugins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.28.5
+      - uses: actions/checkout@v4
+        with:
+          repository: deepseek-ai/deepseek-harness
+          ref: 39163dd30f703a79079e2d2446545cff3c453738
+          path: dsh-base
+      - name: install DSH
+        run: pnpm install --frozen-lockfile
+        working-directory: dsh-base
+      - name: install plugins
+        run: pnpm install --frozen-lockfile
+      - name: build
+        run: pnpm run build
+      - name: provider checks
+        run: pnpm test
+      - name: bundle install/uninstall
+        run: pnpm run verify
+      - name: uninstall audit
+        run: node fixtures/uninstall-audit.mjs
+
+  zero-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: billyangbc/my-dsh
+          ref: main
+          path: fork
+      - uses: actions/checkout@v4
+        with:
+          path: plugins
+      - name: fetch upstream baseline
+        run: git -C fork fetch --depth 1 https://github.com/deepseek-ai/deepseek-harness.git 39163dd30f703a79079e2d2446545cff3c453738
+      - name: zero diff
+        run: node plugins/tooling/verify-zero-diff.mjs fork FETCH_HEAD
