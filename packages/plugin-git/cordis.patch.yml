@@ -1,0 +1,7 @@
+- insert:
+    - id: zifyai-git
+      name: '@zifyai/dsh-git-local'
+    - id: zifyai-api-git
+      name: '@zifyai/dsh-api-git'
+    - id: zifyai-git-client
+      name: '@zifyai/dsh-client-ui-git'

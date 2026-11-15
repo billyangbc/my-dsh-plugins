@@ -1,0 +1,17 @@
+{
+  "name": "@zifyai/dsh-plugin-git",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["cordis.patch.yml"],
+  "dependencies": {
+    "@zifyai/dsh-api-git": "link:../api-git",
+    "@zifyai/dsh-client-ui-git": "link:../client-ui-git",
+    "@zifyai/dsh-git-local": "link:../git-local"
+  },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
