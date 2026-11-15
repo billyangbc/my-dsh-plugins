@@ -1,0 +1,5 @@
+- insert:
+    - id: zifyai-demo-remote
+      name: '@zifyai/dsh-demo-remote'
+    - id: zifyai-demo-client
+      name: '@zifyai/dsh-demo-client'

@@ -270,6 +270,45 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
 
+  packages/demo-bundle:
+    dependencies:
+      '@zifyai/dsh-demo-client':
+        specifier: link:../demo-client
+        version: link:../demo-client
+      '@zifyai/dsh-demo-remote':
+        specifier: link:../demo-remote
+        version: link:../demo-remote
+
+  packages/demo-client:
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-api-gateway':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@zifyai/dsh-demo-remote':
+        specifier: workspace:*
+        version: link:../demo-remote
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/demo-remote:
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-typert-generator':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-typert-protocol':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
   packages/git:
     devDependencies:
       '@deepseek-ai/cordis':

@@ -1,0 +1,16 @@
+{
+  "name": "@zifyai/dsh-plugin-demo",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["cordis.patch.yml"],
+  "dependencies": {
+    "@zifyai/dsh-demo-client": "link:../demo-client",
+    "@zifyai/dsh-demo-remote": "link:../demo-remote"
+  },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
