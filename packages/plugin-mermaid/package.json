@@ -1,0 +1,15 @@
+{
+  "name": "@zifyai/dsh-plugin-mermaid",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["cordis.patch.yml"],
+  "dependencies": {
+    "@zifyai/dsh-client-ui-mermaid": "link:../client-ui-mermaid"
+  },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

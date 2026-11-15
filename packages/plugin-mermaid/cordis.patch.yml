@@ -1,0 +1,3 @@
+- insert:
+    - id: zifyai-mermaid
+      name: '@zifyai/dsh-client-ui-mermaid'
