@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "composite": true, "target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext",
+    "strict": true, "declaration": true, "skipLibCheck": true, "rootDir": "src", "outDir": "lib",
+    "types": ["node"], "allowImportingTsExtensions": true, "rewriteRelativeImportExtensions": true
+  },
+  "include": ["src"]
+}

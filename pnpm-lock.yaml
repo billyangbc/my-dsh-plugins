@@ -66,6 +66,205 @@ importers:
         specifier: 4.6.6
         version: 4.6.6
 
+  packages/api-lsp:
+    dependencies:
+      '@zifyai/dsh-lsp-editor':
+        specifier: workspace:*
+        version: link:../lsp-editor
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-api-remote-access':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-session':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-error@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))(@deepseek-ai/dsh-scope@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))
+      '@deepseek-ai/dsh-typert-protocol':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@types/node':
+        specifier: ^22.19.0
+        version: 22.20.5
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/api-workspace-mutations:
+    dependencies:
+      '@zifyai/dsh-workspace-mutations':
+        specifier: workspace:*
+        version: link:../workspace-mutations
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-api-remote-access':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-session':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-error@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))(@deepseek-ai/dsh-scope@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))
+      '@deepseek-ai/dsh-typert-protocol':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@types/node':
+        specifier: ^22.19.0
+        version: 22.20.5
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/client-ui-editor:
+    devDependencies:
+      '@codemirror/autocomplete':
+        specifier: ^6.18.4
+        version: 6.20.4
+      '@codemirror/commands':
+        specifier: ^6.8.0
+        version: 6.11.1
+      '@codemirror/lang-javascript':
+        specifier: ^6.2.3
+        version: 6.2.5
+      '@codemirror/lang-markdown':
+        specifier: ^6.3.2
+        version: 6.5.2
+      '@codemirror/language':
+        specifier: ^6.11.0
+        version: 6.13.1
+      '@codemirror/lint':
+        specifier: ^6.8.4
+        version: 6.9.8
+      '@codemirror/state':
+        specifier: ^6.5.2
+        version: 6.7.6
+      '@codemirror/view':
+        specifier: ^6.36.0
+        version: 6.43.15
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-api-gateway':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-api-workspace-files':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-subprocess@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-error@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))(@deepseek-ai/dsh-http-proxy@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)))
+      '@deepseek-ai/dsh-client-ui-renderer':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-client-ui-sidebar-right':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-session':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-error@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))(@deepseek-ai/dsh-scope@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))
+      '@types/dompurify':
+        specifier: ^3.2.0
+        version: 3.2.0
+      '@types/react':
+        specifier: ^18.3.0
+        version: 18.3.31
+      '@zifyai/dsh-api-lsp':
+        specifier: workspace:*
+        version: link:../api-lsp
+      '@zifyai/dsh-api-workspace-mutations':
+        specifier: workspace:*
+        version: link:../api-workspace-mutations
+      dompurify:
+        specifier: ^3.2.4
+        version: 3.4.17
+      marked:
+        specifier: ^15.0.6
+        version: 15.0.12
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/lsp-editor:
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-error':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/lsp-editor-local:
+    dependencies:
+      '@deepseek-ai/schemastery':
+        specifier: ^3.19.0
+        version: 3.19.0
+      '@zifyai/dsh-lsp-editor':
+        specifier: workspace:*
+        version: link:../lsp-editor
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-subprocess':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-error@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))(@deepseek-ai/dsh-http-proxy@0.2.2-rc.3(@deepseek-ai/cordis@4.1.0))
+      '@types/node':
+        specifier: ^22.19.0
+        version: 22.20.5
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/plugin-editor:
+    dependencies:
+      '@zifyai/dsh-api-lsp':
+        specifier: link:../api-lsp
+        version: link:../api-lsp
+      '@zifyai/dsh-api-workspace-mutations':
+        specifier: link:../api-workspace-mutations
+        version: link:../api-workspace-mutations
+      '@zifyai/dsh-client-ui-editor':
+        specifier: link:../client-ui-editor
+        version: link:../client-ui-editor
+      '@zifyai/dsh-lsp-editor-local':
+        specifier: link:../lsp-editor-local
+        version: link:../lsp-editor-local
+      '@zifyai/dsh-workspace-mutations-local':
+        specifier: link:../workspace-mutations-local
+        version: link:../workspace-mutations-local
+
+  packages/workspace-mutations:
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@deepseek-ai/dsh-error':
+        specifier: 0.2.2-rc.3
+        version: 0.2.2-rc.3(@deepseek-ai/cordis@4.1.0)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  packages/workspace-mutations-local:
+    dependencies:
+      '@zifyai/dsh-workspace-mutations':
+        specifier: workspace:*
+        version: link:../workspace-mutations
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: 4.1.0
+        version: 4.1.0
+      '@types/node':
+        specifier: ^22.19.0
+        version: 22.20.5
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
 packages:
 
   '@antfu/install-pkg@2.1.0':

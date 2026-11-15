@@ -1,0 +1,18 @@
+- insert:
+    - id: zifyai-workspace-mutations
+      name: '@zifyai/dsh-workspace-mutations-local'
+    - id: zifyai-api-workspace-mutations
+      name: '@zifyai/dsh-api-workspace-mutations'
+    - id: zifyai-lsp
+      name: '@zifyai/dsh-lsp-editor-local'
+      config:
+        command: clangd
+        languageIds:
+          - c
+          - cpp
+          - objective-c
+          - objective-cpp
+    - id: zifyai-api-lsp
+      name: '@zifyai/dsh-api-lsp'
+    - id: zifyai-editor-client
+      name: '@zifyai/dsh-client-ui-editor'

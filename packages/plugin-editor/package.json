@@ -1,0 +1,25 @@
+{
+  "name": "@zifyai/dsh-plugin-editor",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "@zifyai/dsh-api-workspace-mutations": "link:../api-workspace-mutations",
+    "@zifyai/dsh-client-ui-editor": "link:../client-ui-editor",
+    "@zifyai/dsh-workspace-mutations-local": "link:../workspace-mutations-local",
+    "@zifyai/dsh-api-lsp": "link:../api-lsp",
+    "@zifyai/dsh-lsp-editor-local": "link:../lsp-editor-local"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@zifyai/dsh-lsp-editor-local",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": { ".": { "types": "./lib/index.d.ts", "default": "./lib/index.js" }, "./package.json": "./package.json" },
+  "files": ["lib/index.js", "lib/index.d.ts"],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-subprocess": "0.2.2-rc.3",
+    "@zifyai/dsh-lsp-editor": "0.0.1"
+  },
+  "dependencies": { "@zifyai/dsh-lsp-editor": "workspace:*", "@deepseek-ai/schemastery": "^3.19.0" },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-subprocess": "0.2.2-rc.3",
+    "@types/node": "^22.19.0",
+    "typescript": "6.0.3"
+  }
+}
